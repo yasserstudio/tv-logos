@@ -1,0 +1,39 @@
+{
+  "name": "tv-logos",
+  "version": "1.0.0",
+  "description": "A comprehensive collection of television channel logos for IPTV players and streaming applications",
+  "main": "index.json",
+  "scripts": {
+    "validate": "node scripts/validate-logo.js countries/",
+    "validate:file": "node scripts/validate-logo.js",
+    "update": "node scripts/update-index.js",
+    "update:index": "node scripts/update-index.js",
+    "test": "npm run validate && npm run update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/[username]/tv-logos.git"
+  },
+  "keywords": [
+    "tv-logos",
+    "iptv",
+    "channel-logos",
+    "television",
+    "streaming",
+    "m3u",
+    "epg",
+    "logos",
+    "branding"
+  ],
+  "author": "",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/[username]/tv-logos/issues"
+  },
+  "homepage": "https://github.com/[username]/tv-logos#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

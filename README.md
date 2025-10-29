@@ -76,6 +76,58 @@ Reference logos in your M3U playlists:
 http://example.com/stream
 ```
 
+## 🚀 Quick Start
+
+### Adding Logos
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/[username]/tv-logos.git
+cd tv-logos
+
+# 2. Add your logo to the appropriate directory
+cp your-logo.png countries/united-states/channel-name-us.png
+
+# 3. Validate the logo
+npm run validate:file countries/united-states/channel-name-us.png
+
+# 4. Update the index
+npm run update
+
+# 5. Commit and push
+git add .
+git commit -m "Add Channel Name (US) logo"
+git push
+```
+
+For detailed instructions, see [WORKFLOW.md](docs/WORKFLOW.md).
+
+## 📚 Documentation
+
+- **[WORKFLOW.md](docs/WORKFLOW.md)** - Step-by-step guide for adding logos
+- **[LOGO-SOURCES.md](docs/LOGO-SOURCES.md)** - Where to find and prepare logos
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
+
+## 🛠️ Scripts
+
+This repository includes helpful scripts for managing logos:
+
+```bash
+# Validate all logos
+npm run validate
+
+# Validate a specific logo
+npm run validate:file countries/united-states/espn-us.png
+
+# Update index.json with all logos
+npm run update
+
+# Run validation and update
+npm test
+```
+
+See [scripts/README.md](scripts/README.md) for more details.
+
 ## 🤝 Contributing
 
 We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
@@ -84,6 +136,14 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 - Logo quality standards
 - Naming conventions
 - File size optimization
+
+### Where to Get Logos
+
+See [LOGO-SOURCES.md](docs/LOGO-SOURCES.md) for comprehensive guidance on:
+- Official channel websites
+- Existing logo repositories
+- Logo preparation tools
+- Optimization techniques
 
 ## 📜 License
 

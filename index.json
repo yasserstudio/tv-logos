@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "updated": "2025-10-29",
+  "description": "TV Logos Repository Index",
+  "repository": "https://github.com/[username]/tv-logos",
+  "base_url": "https://raw.githubusercontent.com/[username]/tv-logos/main",
+  "channels": [
+    {
+      "id": "espn-us",
+      "name": "ESPN",
+      "country": "united-states",
+      "country_code": "us",
+      "category": "sports",
+      "path": "countries/united-states/espn-us.png",
+      "url": "https://raw.githubusercontent.com/[username]/tv-logos/main/countries/united-states/espn-us.png"
+    },
+    {
+      "id": "cnn-us",
+      "name": "CNN",
+      "country": "united-states",
+      "country_code": "us",
+      "category": "news",
+      "path": "countries/united-states/cnn-us.png",
+      "url": "https://raw.githubusercontent.com/[username]/tv-logos/main/countries/united-states/cnn-us.png"
+    },
+    {
+      "id": "bbc-one-uk",
+      "name": "BBC One",
+      "country": "united-kingdom",
+      "country_code": "uk",
+      "category": "general",
+      "path": "countries/united-kingdom/bbc-one-uk.png",
+      "url": "https://raw.githubusercontent.com/[username]/tv-logos/main/countries/united-kingdom/bbc-one-uk.png"
+    },
+    {
+      "id": "cbc-ca",
+      "name": "CBC",
+      "country": "canada",
+      "country_code": "ca",
+      "category": "general",
+      "path": "countries/canada/cbc-ca.png",
+      "url": "https://raw.githubusercontent.com/[username]/tv-logos/main/countries/canada/cbc-ca.png"
+    }
+  ],
+  "categories": [
+    "sports",
+    "news",
+    "entertainment",
+    "movies",
+    "documentary",
+    "kids",
+    "music",
+    "general",
+    "lifestyle",
+    "religious"
+  ],
+  "countries": [
+    {
+      "code": "us",
+      "name": "United States",
+      "directory": "countries/united-states"
+    },
+    {
+      "code": "uk",
+      "name": "United Kingdom",
+      "directory": "countries/united-kingdom"
+    },
+    {
+      "code": "ca",
+      "name": "Canada",
+      "directory": "countries/canada"
+    },
+    {
+      "code": "au",
+      "name": "Australia",
+      "directory": "countries/australia"
+    },
+    {
+      "code": "de",
+      "name": "Germany",
+      "directory": "countries/germany"
+    },
+    {
+      "code": "fr",
+      "name": "France",
+      "directory": "countries/france"
+    },
+    {
+      "code": "es",
+      "name": "Spain",
+      "directory": "countries/spain"
+    },
+    {
+      "code": "it",
+      "name": "Italy",
+      "directory": "countries/italy"
+    },
+    {
+      "code": "intl",
+      "name": "International",
+      "directory": "countries/international"
+    }
+  ],
+  "statistics": {
+    "total_channels": 4,
+    "total_countries": 9,
+    "last_updated": "2025-10-29"
+  }
+}

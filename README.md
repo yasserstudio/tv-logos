@@ -78,33 +78,63 @@ http://example.com/stream
 
 ## 🚀 Quick Start
 
-### Adding Logos
+### Method 1: Import from GitHub (Fastest)
+
+Import logos from the official [tv-logo/tv-logos](https://github.com/tv-logo/tv-logos) repository:
 
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/[username]/tv-logos.git
 cd tv-logos
 
-# 2. Add your logo to the appropriate directory
+# Import logos from a specific country
+npm run import:github -- --country united-states --limit 20
+
+# Validate and update
+npm test
+
+# Commit
+git add .
+git commit -m "Import logos from tv-logo/tv-logos"
+git push
+```
+
+### Method 2: Import from Local Directory
+
+If you have logos in a local directory:
+
+```bash
+npm run import:dir -- /path/to/logos
+npm test
+git add . && git commit -m "Import logos"
+```
+
+### Method 3: Add Logos Manually
+
+```bash
+# Add your logo to the appropriate directory
 cp your-logo.png countries/united-states/channel-name-us.png
 
-# 3. Validate the logo
+# Validate the logo
 npm run validate:file countries/united-states/channel-name-us.png
 
-# 4. Update the index
+# Update the index
 npm run update
 
-# 5. Commit and push
+# Commit and push
 git add .
 git commit -m "Add Channel Name (US) logo"
 git push
 ```
 
-For detailed instructions, see [WORKFLOW.md](docs/WORKFLOW.md).
+For detailed instructions, see:
+- **[IMPORT-GUIDE.md](docs/IMPORT-GUIDE.md)** - Import logos from external sources
+- **[WORKFLOW.md](docs/WORKFLOW.md)** - Manual logo addition workflow
 
 ## 📚 Documentation
 
-- **[WORKFLOW.md](docs/WORKFLOW.md)** - Step-by-step guide for adding logos
+- **[IMPORT-GUIDE.md](docs/IMPORT-GUIDE.md)** - Import logos from GitHub or local directories (⭐ Start here!)
+- **[WORKFLOW.md](docs/WORKFLOW.md)** - Step-by-step guide for manually adding logos
 - **[LOGO-SOURCES.md](docs/LOGO-SOURCES.md)** - Where to find and prepare logos
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
 
@@ -113,20 +143,27 @@ For detailed instructions, see [WORKFLOW.md](docs/WORKFLOW.md).
 This repository includes helpful scripts for managing logos:
 
 ```bash
-# Validate all logos
-npm run validate
+# Import logos from GitHub repository
+npm run import:github                              # Import all
+npm run import:github -- --country united-states   # Import specific country
+npm run import:github -- --limit 10 --dry-run      # Test before importing
 
-# Validate a specific logo
-npm run validate:file countries/united-states/espn-us.png
+# Import logos from local directory
+npm run import:dir -- /path/to/logos               # Import from directory
+npm run import:dir -- ~/logos --dry-run            # Test before importing
 
-# Update index.json with all logos
-npm run update
+# Validate logos
+npm run validate                                   # Validate all
+npm run validate:file <path>                       # Validate specific file
 
-# Run validation and update
+# Update index.json
+npm run update                                     # Update metadata
+
+# Run validation and update together
 npm test
 ```
 
-See [scripts/README.md](scripts/README.md) for more details.
+See [scripts/README.md](scripts/README.md) and [IMPORT-GUIDE.md](docs/IMPORT-GUIDE.md) for more details.
 
 ## 🤝 Contributing
 

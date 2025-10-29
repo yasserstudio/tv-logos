@@ -8,6 +8,8 @@
     "validate:file": "node scripts/validate-logo.js",
     "update": "node scripts/update-index.js",
     "update:index": "node scripts/update-index.js",
+    "import:github": "node scripts/import-from-github.js",
+    "import:dir": "node scripts/import-from-directory.js",
     "test": "npm run validate && npm run update"
   },
   "repository": {
